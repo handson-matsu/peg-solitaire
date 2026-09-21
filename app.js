@@ -119,3 +119,16 @@ $('change-count').addEventListener('click', () => {
 $('retry').addEventListener('click', load);
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && game && !busy) { selected = null; render(); } });
 load();
+
+// Record one visit per page load without waiting for the response or retrying.
+try {
+  fetch('https://script.google.com/macros/s/AKfycbxssCIHsD-N97SHxNC_GN0ihYeC0qy-lb-EY0KmSs6Gnztaph1sITMerLVEnNWOGkYc/exec?app=peg-solitaire', {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-store',
+    credentials: 'omit',
+    keepalive: true,
+  }).catch(() => {});
+} catch {
+  // Access logging must never interrupt the game.
+}

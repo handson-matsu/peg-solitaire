@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8ff">
+  <meta name="description" content="ペグを飛び越して、最後の1個を中央へ。5〜32個のペグ数から選んで遊べるペグソリティア。">
+  <title>ペグソリティア</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <section id="start-screen" class="start-screen" aria-labelledby="title">
+      <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="eyebrow">PEG SOLITAIRE</p>
+      <h1 id="title">ペグソリティア</h1>
+      <p class="intro">ペグを1つ飛び越して取り除き、<br>最後の1個を中央に残そう！</p>
+      <form id="start-form" class="picker-card">
+        <fieldset>
+          <legend>ペグ数を選ぼう</legend>
+          <div id="peg-picker" class="peg-picker"></div>
+        </fieldset>
+        <button id="start-button" class="button primary start-button" type="submit" disabled>読み込み中…</button>
+        <p id="load-status" class="load-status" role="status"></p>
+        <button id="retry" class="button secondary" type="button" hidden>もう一度読み込む</button>
+      </form>
+      <p class="start-note">タップで選んで、タップでジャンプ。</p>
+    </section>
+
+    <section id="game-screen" class="game-screen" aria-label="ペグソリティアのゲーム" hidden>
+      <header class="game-header">
+        <button id="change-count" class="back-button" type="button"><span aria-hidden="true">‹</span> ペグ数を変更</button>
+        <span class="wordmark">PEG SOLITAIRE</span>
+      </header>
+      <div class="scorebar">
+        <div><span class="stat-label">残りペグ</span><strong id="remaining">7</strong><span class="unit">個</span></div>
+        <span class="score-divider" aria-hidden="true"></span>
+        <div><span class="stat-label">手数</span><strong id="move-count">0</strong><span class="unit">手</span></div>
+      </div>
+      <div id="message" class="message" role="status" aria-live="polite" aria-atomic="true">
+        <h2 id="message-title" tabindex="-1">動かすペグをタップ</h2>
+        <p id="message-detail">最後の1個は、中央の穴へ。</p>
+      </div>
+      <div class="board-wrap">
+        <div id="board" class="board" role="group" aria-label="33穴の盤面"></div>
+      </div>
+      <div class="legend" aria-hidden="true"><span><i class="legend-peg"></i>選択中</span><span><i class="legend-target"></i>移動できる穴</span></div>
+      <div class="game-actions">
+        <button id="undo" class="button secondary" type="button"><span aria-hidden="true">↶</span> 1手戻す</button>
+        <button id="reset" class="button secondary" type="button"><span aria-hidden="true">↺</span> リセット</button>
+        <button id="next" class="button primary next-button" type="button">別の問題</button>
+      </div>
+    </section>
+    <noscript><p class="noscript">遊ぶにはブラウザのJavaScriptを有効にしてください。</p></noscript>
+  </main>
+</body>
+</html>

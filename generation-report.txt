@@ -1,0 +1,37 @@
+English board: reverse generation from center; D4 symmetry deduplication
+Seed: 20260921; beam width: 5000000; time limit: 120s; expansion limit: 100000000
+Search elapsed: 12.0118s; expanded states: 23475686
+Stop reason: all layers processed
+100+ means at least 100 saved. Sampled counts are lower bounds.
+Unvisited or sampled zero does not prove impossibility.
+Solutions align with puzzle array indices and contain forward moves.
+
+Pegs | Problems | Discovered classes | Status
+5 | 39 | 39 | exhaustive
+6 | 100+ | 171 | exhaustive
+7 | 100+ | 719 | exhaustive
+8 | 100+ | 2757 | exhaustive
+9 | 100+ | 9751 | exhaustive
+10 | 100+ | 31312 | exhaustive
+11 | 100+ | 89927 | exhaustive
+12 | 100+ | 229614 | exhaustive
+13 | 100+ | 517854 | exhaustive
+14 | 100+ | 1022224 | exhaustive
+15 | 100+ | 1753737 | exhaustive
+16 | 100+ | 2598215 | exhaustive
+17 | 100+ | 3312423 | exhaustive
+18 | 100+ | 3626632 | exhaustive
+19 | 100+ | 3413313 | exhaustive
+20 | 100+ | 2765623 | exhaustive
+21 | 100+ | 1930324 | exhaustive
+22 | 100+ | 1160977 | exhaustive
+23 | 100+ | 600372 | exhaustive
+24 | 100+ | 265865 | exhaustive
+25 | 100+ | 100565 | exhaustive
+26 | 100+ | 32250 | exhaustive
+27 | 100+ | 8688 | exhaustive
+28 | 100+ | 1917 | exhaustive
+29 | 100+ | 348 | exhaustive
+30 | 50 | 50 | exhaustive
+31 | 7 | 7 | exhaustive
+32 | 2 | 2 | exhaustive

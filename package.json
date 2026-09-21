@@ -1,0 +1,6 @@
+{
+  "name": "peg-solitaire",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/game.test.js" }
+}
